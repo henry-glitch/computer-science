@@ -1,13 +1,12 @@
-def callback(recognizer,audio): 
-    try: 
-        Speech= recognizer.recognize_google(audio) 
-        ReactToSpeech(Speech)
-   except sr.UnknownValueError: 
-        print("Google Speech Recognition could not understand audio") 
-   except sr.RequestError as e: 
-        print("Could not request results from service; {0}".format(e)) 
-def ReactToSpeech(Speech): 
-   if "mirror on the wall" in Speech: 
-        Say("Who is the fairest of them all") # From last tutorial
-def StopListening(): 
-   stop_listening(wait_for_stop=False) 
+
+import speech_recognition as sr
+
+r = sr.Recognizer()
+with sr.Microphone() as source:
+    print("say Anything :")
+    audio = r.listen(source)
+    try:
+        text = r.recognize_google(audio)
+        print("You said : {}".format(text))
+    except:
+        print("Sorry could not recognize what you said")
