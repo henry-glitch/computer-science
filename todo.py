@@ -8,7 +8,7 @@ while True:
     print('we have added ')
     print("You need to do  : \n")
     for i in todo:
-        print(i, end = ' \n')
+        print(i, end = '\n')
         print('\ndo you want to add more  y / n?')
         yn = input('')
     if yn == 'y':
@@ -18,4 +18,10 @@ while True:
         print('do you want to add more  y / n?')
         yn = input('')
     else:
-        break
+        print('you need to :')
+        print('')
+        for i in todo:
+            print(i, end = ' ')
+            print(u'\u2713          \n' )
+    break
+
