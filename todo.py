@@ -1,3 +1,7 @@
+with open('output.txt') as f:
+    todo = f.read().split('\n')
+
+
 
 while True:
     todo = []
@@ -8,6 +12,9 @@ while True:
     print('we have added ')
     print("You need to do  : \n")
     for i in todo:
+        with open('output.txt', 'w') as f:
+            for item in todo:              #note: don't call your variable list as that is a python reserved keyword
+                f.write(str(item)+'\n')
         print(i, end = '\n')
         print('\ndo you want to add more  y / n?')
         yn = input('')

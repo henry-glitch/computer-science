@@ -37,7 +37,7 @@ bool0 = True
 #number and string concatination
 print('Hello my favourit number is ' + str(int0))
 #this causes an problem ending the string
-print('There's a problem here ')
+print('Theres a problem here ')
 #to fix this we use the backslash charecter \ :
 print('There\'s not problem here ')
 #numbers in python start with 0 instead of one eg:
