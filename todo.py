@@ -27,8 +27,21 @@ while True:
     else:
         print('you need to :')
         print('')
-        for i in todo:
-            print(i, end = ' ')
-            print(u'\u2713          \n' )
+        with open('output.txt', 'w') as f:
+            for item in todo:              
+                f.write(str(item)+'\n')
+        print(i, end = '          \u2713 \n')
     break
 
+if len(todo) >= 1:
+    print('have you done any of your tasks?')
+    done = input('enter what task you have done: \n')
+    todo.remove(done)
+    print('you need to :')
+    print('')
+    with open('output.txt', 'w') as f:
+        for item in todo:              
+            f.write(str(item)+'   \n')
+            print(i, end = '          \u2713 \n')
+else:
+    print('That is not on your list')
