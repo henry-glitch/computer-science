@@ -37,7 +37,7 @@ if len(todo) >= 1:
     print('have you done any of your tasks?')
     done = input('enter what task you have done: \n')
     todo.remove(done)
-    print('you need to :')
+    print('you need to do:')
     print('')
     with open('output.txt', 'w') as f:
         for item in todo:              
