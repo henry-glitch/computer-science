@@ -6,7 +6,7 @@ with sr.Microphone() as source:
     print("say Anything :")
     audio = r.listen(source)
     try:
-        text = r.recognize_google(audio)
-        print("You said : {}".format(text))
+        text = (audio)
+        print("You said : "+  audio)
     except:
         print("Sorry could not recognize what you said")
